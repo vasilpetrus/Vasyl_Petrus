@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OtherBeanC {
 
+    //Значення цього біна буде null, думаю по тій причині, що поля ініціалізуються в першу чергу, ніж біни
     @Autowired
     private BeanC beanC;
 

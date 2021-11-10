@@ -12,9 +12,9 @@ public class CustomUserBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof ExampleBean) {
             if (((ExampleBean) bean).getName() != null && ((ExampleBean) bean).getValue() > 0) {
-                System.out.println(beanName + " - valid!");
+                System.out.println(beanName + " - VALID!");
             } else {
-                System.out.println(beanName + " - NOT valid!");
+                System.out.println(beanName + " - NOT VALID!");
             }
         }
             return bean;

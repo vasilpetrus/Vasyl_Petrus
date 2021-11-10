@@ -40,5 +40,4 @@ public class BeansConfig {
     public BeanF beanF(){
         return new BeanF();
     }
-
 }

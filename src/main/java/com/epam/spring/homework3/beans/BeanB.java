@@ -7,7 +7,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-public class BeanB {
+public class BeanB implements ExampleBean{
 
     @Value("${beanB.name}")
     private String name;

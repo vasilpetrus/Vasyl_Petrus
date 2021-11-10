@@ -1,14 +1,11 @@
 package com.epam.spring.homework3.beans;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Component
-public class BeanC {
+public class BeanC implements ExampleBean{
 
     @Value("${beanC.name}")
     private String name;

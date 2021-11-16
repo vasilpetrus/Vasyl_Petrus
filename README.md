@@ -1,8 +1,7 @@
-# Vasyl_Petrus
+# Vasyl_Petrus - Online Shop - Spring MVC
 Java Lab #30
 Spring_3 Web MVC Homework 
-
-ff 
+ 
 
 Required: 
 

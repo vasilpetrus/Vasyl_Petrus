@@ -1,0 +1,590 @@
+{
+	"info": {
+		"_postman_id": "f687c830-eed5-45ad-907f-32ec5eca191b",
+		"name": "OnlineShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADD BANK CARD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"userInformationId\":\"1\",\n    \"cardNumber\":\"1111222233334444\",\n    \"expirationYear\":\"25\",\n    \"expirationMont\":\"12\",\n    \"cardOwner\":\"Slivka Olha\",\n    \"cvv\":\"555\",\n    \"balance\":\"5300.02\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bankcard",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST BANK CARD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/bankcard",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BANK CARD BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/bankcard/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankcard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE BANK CARD BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/bankcard/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankcard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD CATEGORY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"2\",\n    \"category\":\"professional\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/category",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST CATEGORY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/category",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CATEGORY BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/category/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE  CATEGORY BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/category/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD ORDER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"productId\":\"1\",\n    \"userId\":\"1\",\n    \"userOrderId\":\"1\",\n    \"number\":\"454\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST ORDER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ORDER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE ORDER BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"categoryId\":\"1\",\n    \"name\":\"DJI Mavic Mini 2\",\n    \"description\":\"Dji drone. 16Mp camera. 2 battery\",\n    \"price\":\"16011.25\",\n    \"status\":\"yes\",\n    \"photo\":\"pictures/mavic_mini2.jpg\",\n    \"orderNumber\":\"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST PRODUCT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE PRODUCT BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"userInformationId\":\"1\",\n    \"roleId\":\"1\",\n    \"email\":\"slivka.olha@bk.ru\",\n    \"password\":\"123321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER BE EMAIL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user/yanap@bk.ru",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"yanap@bk.ru"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE USER BY EMAIL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user/yanap@bk.ru",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"yanap@bk.ru"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD USER INFORMATION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"firstName\":\"Olha\",\n    \"lastName\":\"Slivka\",\n    \"telephone\":\"+380952223331\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user-information",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST USERS  INFORMATION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user-information",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER  INFORMATION BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user-information/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-information",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE USER  INFORMATION BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user-information/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-information",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD USER ORDER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"address\":\"Lviv, Holovna str,23\",\n    \"orderDate\":\"2021-11-16T13:23:21.744+00:00\",\n    \"deliveryDate\":\"2021-11-16T13:23:21.744+00:00\",\n    \"status\":\"new\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user-order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST USER ORDER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user-order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER ORDER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user-order/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-order",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE USER ORDER BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user-order/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

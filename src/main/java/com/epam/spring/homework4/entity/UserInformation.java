@@ -10,5 +10,5 @@ public class UserInformation {
     private long id;
     private String firstName;
     private String lastName;
-    private long telephone;
+    private String telephone;
 }

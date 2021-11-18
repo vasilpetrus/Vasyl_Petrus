@@ -3,16 +3,32 @@ package com.epam.spring.homework4.dto;
 import lombok.Builder;
 import lombok.Data;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 @Data
 @Builder
 public class ProductDTO {
 
+    @Positive
     private long id;
+
+    @Positive
     private long categoryId;
+
+    @NotEmpty(message = "Product name should not be empty!")
     private String name;
+
     private String description;
+
+    @Positive
     private Double price;
+
+    @NotEmpty(message = "Product status should not be empty!")
     private String status;
+
     private String photo;
+
     private long orderNumber;
 }

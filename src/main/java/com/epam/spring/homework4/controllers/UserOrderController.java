@@ -1,47 +1,48 @@
 package com.epam.spring.homework4.controllers;
 
-import com.epam.spring.homework4.dao.UserOrderDAO;
+import com.epam.spring.homework4.service.UserOrderService;
 import com.epam.spring.homework4.dto.UserOrderDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
 public class UserOrderController {
 
-    private final UserOrderDAO userOrderDAO;
+    private final UserOrderService userOrderService;
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/user-order")
     public List<UserOrderDTO> getAllUserOrders() {
-        return userOrderDAO.getAllUserOrders();
+        return userOrderService.getAllUserOrders();
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/user-order/{id}")
     public UserOrderDTO getUserOrder(@PathVariable long id) {
-        return userOrderDAO.getUserOrder(id);
+        return userOrderService.getUserOrder(id);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(value = "/user-order")
-    public UserOrderDTO createUserOrder(@RequestBody UserOrderDTO userOrderDTO) {
-        return userOrderDAO.createUserOrder(userOrderDTO);
+    public UserOrderDTO createUserOrder(@RequestBody @Valid UserOrderDTO userOrderDTO) {
+        return userOrderService.createUserOrder(userOrderDTO);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @PutMapping(value = "/user-order/{id}")
-    public UserOrderDTO updateUserOrder(@PathVariable long id, @RequestBody UserOrderDTO userOrderDTO) {
-        return userOrderDAO.updateUserOrder(id, userOrderDTO);
+    public UserOrderDTO updateUserOrder(@PathVariable long id, @RequestBody @Valid UserOrderDTO userOrderDTO) {
+        return userOrderService.updateUserOrder(id, userOrderDTO);
     }
 
     @DeleteMapping(value = "/user-order/{id}")
     public ResponseEntity<Void> deleteUserOrder(@PathVariable long id) {
-        userOrderDAO.deleteUserOrder(id);
+        userOrderService.deleteUserOrder(id);
         return ResponseEntity.noContent().build();
     }
 }

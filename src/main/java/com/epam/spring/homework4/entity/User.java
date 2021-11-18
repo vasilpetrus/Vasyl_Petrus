@@ -10,6 +10,7 @@ public class User {
     private long id;
     private long userInformationId;
     private int roleId;
+
     private String email;
     private transient String password;
 }

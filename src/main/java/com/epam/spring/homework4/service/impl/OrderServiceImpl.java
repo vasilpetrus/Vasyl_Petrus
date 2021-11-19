@@ -1,10 +1,10 @@
 package com.epam.spring.homework4.service.impl;
 
-import com.epam.spring.homework4.service.OrderService;
 import com.epam.spring.homework4.dto.OrderDTO;
 import com.epam.spring.homework4.entity.Order;
 import com.epam.spring.homework4.mapper.OrderMapper;
 import com.epam.spring.homework4.myRepository.OrderRepository;
+import com.epam.spring.homework4.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

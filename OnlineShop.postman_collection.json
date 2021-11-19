@@ -383,7 +383,7 @@
 			"response": []
 		},
 		{
-			"name": "GET USER BE EMAIL",
+			"name": "GET USER BY EMAIL",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -583,6 +583,15 @@
 						"1"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACTUATOR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
 			},
 			"response": []
 		}

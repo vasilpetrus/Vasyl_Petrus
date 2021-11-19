@@ -1,7 +1,6 @@
 package com.epam.spring.homework4.myRepository;
 
 import com.epam.spring.homework4.entity.Order;
-import com.epam.spring.homework4.entity.Product;
 
 import java.util.List;
 

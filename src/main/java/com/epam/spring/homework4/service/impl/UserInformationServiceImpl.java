@@ -1,10 +1,10 @@
 package com.epam.spring.homework4.service.impl;
 
-import com.epam.spring.homework4.service.UserInformationService;
 import com.epam.spring.homework4.dto.UserInformationDTO;
 import com.epam.spring.homework4.entity.UserInformation;
 import com.epam.spring.homework4.mapper.UserInformationMapper;
 import com.epam.spring.homework4.myRepository.UserInformationRepository;
+import com.epam.spring.homework4.service.UserInformationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -1,10 +1,10 @@
 package com.epam.spring.homework4.service.impl;
 
-import com.epam.spring.homework4.service.BankCardService;
 import com.epam.spring.homework4.dto.BankCardDTO;
 import com.epam.spring.homework4.entity.BankCard;
 import com.epam.spring.homework4.mapper.BankCardMapper;
 import com.epam.spring.homework4.myRepository.BankCardRepository;
+import com.epam.spring.homework4.service.BankCardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -1,10 +1,10 @@
 package com.epam.spring.homework4.service.impl;
 
-import com.epam.spring.homework4.service.ProductService;
 import com.epam.spring.homework4.dto.ProductDTO;
 import com.epam.spring.homework4.entity.Product;
 import com.epam.spring.homework4.mapper.ProductMapper;
 import com.epam.spring.homework4.myRepository.ProductRepository;
+import com.epam.spring.homework4.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

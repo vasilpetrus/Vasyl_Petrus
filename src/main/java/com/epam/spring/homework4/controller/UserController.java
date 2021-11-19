@@ -1,7 +1,7 @@
-package com.epam.spring.homework4.controllers;
+package com.epam.spring.homework4.controller;
 
-import com.epam.spring.homework4.service.UserService;
 import com.epam.spring.homework4.dto.UserDTO;
+import com.epam.spring.homework4.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,8 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/user/{email}")
     public UserDTO getUser(@PathVariable String email) {
-        return userService.getUser(email);
+
+     return userService.getUser(email);
     }
 
     @ResponseStatus(HttpStatus.CREATED)

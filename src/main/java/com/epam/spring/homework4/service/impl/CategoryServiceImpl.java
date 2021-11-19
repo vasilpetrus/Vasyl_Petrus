@@ -1,10 +1,10 @@
 package com.epam.spring.homework4.service.impl;
 
-import com.epam.spring.homework4.service.CategoryService;
 import com.epam.spring.homework4.dto.CategoryDTO;
 import com.epam.spring.homework4.entity.Category;
 import com.epam.spring.homework4.mapper.CategoryMapper;
 import com.epam.spring.homework4.myRepository.CategoryRepository;
+import com.epam.spring.homework4.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

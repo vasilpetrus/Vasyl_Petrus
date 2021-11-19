@@ -1,7 +1,7 @@
-package com.epam.spring.homework4.controllers;
+package com.epam.spring.homework4.controller;
 
-import com.epam.spring.homework4.service.ProductService;
 import com.epam.spring.homework4.dto.ProductDTO;
+import com.epam.spring.homework4.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

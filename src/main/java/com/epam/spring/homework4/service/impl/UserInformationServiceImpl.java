@@ -21,7 +21,7 @@ public class UserInformationServiceImpl implements UserInformationService {
     @Override
     public UserInformationDTO getUserInformation(long id) {
         log.info("get user information by id {}", id);
-        UserInformation userInformation = userInformationRepository.getUserInformation(id);
+        UserInformation userInformation = userInformationRepository.findById(id);
         return UserInformationMapper.INSTANCE.mapUserInformationDTO(userInformation);
     }
 
@@ -29,28 +29,20 @@ public class UserInformationServiceImpl implements UserInformationService {
     @Override
     public List<UserInformationDTO> getAllUsersInformation() {
         log.info("get all users information");
-        return UserInformationMapper.INSTANCE.mapUsersInformationDto(userInformationRepository.getAllUsersInformation());
+        return UserInformationMapper.INSTANCE.mapUsersInformationDto(userInformationRepository.findAll());
     }
 
     @Override
     public UserInformationDTO createUserInformation(UserInformationDTO userInformationDTO) {
         log.info("create user information with id {}", userInformationDTO.getId());
         UserInformation userInformation = UserInformationMapper.INSTANCE.mapUserInformation(userInformationDTO);
-        userInformation = userInformationRepository.createUserInformation(userInformation);
-        return UserInformationMapper.INSTANCE.mapUserInformationDTO(userInformation);
-    }
-
-    @Override
-    public UserInformationDTO updateUserInformation(long id, UserInformationDTO userInformationDto) {
-        log.info("update user information with id {}", id);
-        UserInformation userInformation = UserInformationMapper.INSTANCE.mapUserInformation(userInformationDto);
-        userInformation = userInformationRepository.updateUserInformation(id, userInformation);
+        userInformation = userInformationRepository.save(userInformation);
         return UserInformationMapper.INSTANCE.mapUserInformationDTO(userInformation);
     }
 
     @Override
     public void deleteUserInformation(long id) {
         log.info("delete user information by id {}", id);
-        userInformationRepository.deleteUserInformation(id);
+        userInformationRepository.deleteById(id);
     }
 }

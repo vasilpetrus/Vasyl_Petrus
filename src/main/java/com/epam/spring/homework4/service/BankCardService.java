@@ -12,7 +12,5 @@ public interface BankCardService {
 
     BankCardDTO createBankCard(BankCardDTO bankCardDto);
 
-    BankCardDTO updateBankCard(long id, BankCardDTO bankCardDto);
-
     void deleteBankCard(long id);
 }

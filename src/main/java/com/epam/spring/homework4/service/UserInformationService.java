@@ -12,7 +12,5 @@ public interface UserInformationService {
 
     UserInformationDTO createUserInformation(UserInformationDTO userInformationDto);
 
-    UserInformationDTO updateUserInformation(long id, UserInformationDTO userInformationDto);
-
     void deleteUserInformation(long id);
 }

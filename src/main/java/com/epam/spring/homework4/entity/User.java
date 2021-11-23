@@ -1,16 +1,23 @@
 package com.epam.spring.homework4.entity;
 
-import lombok.Builder;
 import lombok.Data;
 
+import javax.persistence.*;
+
+
+@Entity
 @Data
-@Builder
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private long userInformationId;
-    private int roleId;
+
+    private Integer role;
 
     private String email;
-    private transient String password;
+
+    private String password;
 }

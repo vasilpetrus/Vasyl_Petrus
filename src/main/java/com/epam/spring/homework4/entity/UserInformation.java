@@ -1,13 +1,17 @@
 package com.epam.spring.homework4.entity;
 
-import lombok.Builder;
 import lombok.Data;
 
+import javax.persistence.*;
+
+@Entity
 @Data
-@Builder
 public class UserInformation {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private String firstName;
     private String lastName;
     private String telephone;

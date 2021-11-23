@@ -1,13 +1,17 @@
 package com.epam.spring.homework4.entity;
 
-import lombok.Builder;
 import lombok.Data;
 
+import javax.persistence.*;
+
+@Entity
 @Data
-@Builder
 public class BankCard {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private long userInformationId;
     private long cardNumber;
     private int expirationYear;

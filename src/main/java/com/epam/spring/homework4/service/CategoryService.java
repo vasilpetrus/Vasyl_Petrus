@@ -12,7 +12,5 @@ public interface CategoryService {
 
     CategoryDTO createCategory(CategoryDTO categoryDto);
 
-    CategoryDTO updateCategory(long id, CategoryDTO categoryDTO);
-
     void deleteCategory(long id);
 }

@@ -34,12 +34,6 @@ public class ProductController {
         return productService.createProduct(productDTO);
     }
 
-    @ResponseStatus(HttpStatus.OK)
-    @PutMapping(value = "/product/{id}")
-    public ProductDTO updateProduct(@PathVariable long id, @RequestBody @Valid ProductDTO productDTO) {
-        return productService.updateProduct(id, productDTO);
-    }
-
     @DeleteMapping(value = "/product/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable long id) {
         productService.deleteProduct(id);

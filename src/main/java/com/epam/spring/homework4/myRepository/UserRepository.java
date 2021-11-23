@@ -1,18 +1,19 @@
 package com.epam.spring.homework4.myRepository;
 
 import com.epam.spring.homework4.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface UserRepository {
+@Repository
+public interface UserRepository extends JpaRepository<User, String> {
 
-    User getUser(String email);
+    User findByEmail(String email);
 
-    List<User> getAllUsers();
+    List<User> findAll();
 
-    User createUser(User user);
+    User save(User user);
 
-    User updateUser(String email, User user);
-
-    void deleteUser(String email);
+    void deleteByEmail(String email);
 }

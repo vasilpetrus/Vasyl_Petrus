@@ -12,7 +12,5 @@ public interface UserService {
 
     UserDTO createUser(UserDTO userDto);
 
-    UserDTO updateUser(String email, UserDTO userDto);
-
     void deleteUser(String email);
 }

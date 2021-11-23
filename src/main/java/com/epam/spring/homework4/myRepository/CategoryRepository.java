@@ -1,18 +1,19 @@
 package com.epam.spring.homework4.myRepository;
 
 import com.epam.spring.homework4.entity.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface CategoryRepository {
+@Repository
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-    Category getCategory(long id);
+    Category findById(long id);
 
-    List<Category> getAllCategory();
+    List<Category> findAll();
 
-    Category createCategory(Category category);
+    Category save(Category category);
 
-    Category updateCategory(long id, Category category);
-
-    void deleteBankCard(long id);
+    void deleteById(long id);
 }

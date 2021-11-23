@@ -21,35 +21,27 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO getUser(String email) {
         log.info("getUser by email {}", email);
-        User user = userRepository.getUser(email);
+        User user = userRepository.findByEmail(email);
         return UserMapper.INSTANCE.mapUserDTO(user);
     }
 
     @Override
     public List<UserDTO> getAllUsers() {
         log.info("get all users");
-        return UserMapper.INSTANCE.mapUsersDto(userRepository.getAllUsers());
+        return UserMapper.INSTANCE.mapUsersDto(userRepository.findAll());
     }
 
     @Override
     public UserDTO createUser(UserDTO userDto) {
         log.info("createUser with email {}", userDto.getEmail());
         User user = UserMapper.INSTANCE.mapUser(userDto);
-        user = userRepository.createUser(user);
-        return UserMapper.INSTANCE.mapUserDTO(user);
-    }
-
-    @Override
-    public UserDTO updateUser(String email, UserDTO userDto) {
-        log.info("updateUser with email {}", email);
-        User user = UserMapper.INSTANCE.mapUser(userDto);
-        user = userRepository.updateUser(email, user);
+        user = userRepository.save(user);
         return UserMapper.INSTANCE.mapUserDTO(user);
     }
 
     @Override
     public void deleteUser(String email) {
         log.info("deleteUser by email {}", email);
-        userRepository.deleteUser(email);
+        userRepository.deleteByEmail(email);
     }
 }

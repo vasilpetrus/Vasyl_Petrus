@@ -21,35 +21,27 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDTO getOrder(long id) {
         log.info("get order by id {}", id);
-        Order order = orderRepository.getOrder(id);
+        Order order = orderRepository.findById(id);
         return OrderMapper.INSTANCE.mapOrderDTO(order);
     }
 
     @Override
     public List<OrderDTO> getAllOrders() {
         log.info("get all order");
-        return OrderMapper.INSTANCE.mapOrderDto(orderRepository.getAllOrders());
+        return OrderMapper.INSTANCE.mapOrderDto(orderRepository.findAll());
     }
 
     @Override
     public OrderDTO createOrder(OrderDTO orderDTO) {
         log.info("create order with id {}", orderDTO.getId());
         Order order = OrderMapper.INSTANCE.mapOrder(orderDTO);
-        order = orderRepository.createOrder(order);
-        return OrderMapper.INSTANCE.mapOrderDTO(order);
-    }
-
-    @Override
-    public OrderDTO updateOrder(long id, OrderDTO orderDTO) {
-        log.info("update order with id {}", id);
-        Order order = OrderMapper.INSTANCE.mapOrder(orderDTO);
-        order = orderRepository.updateOrder(id, order);
+        order = orderRepository.save(order);
         return OrderMapper.INSTANCE.mapOrderDTO(order);
     }
 
     @Override
     public void deleteOrder(long id) {
         log.info("delete order by id {}", id);
-        orderRepository.deleteOrder(id);
+        orderRepository.deleteById(id);
     }
 }

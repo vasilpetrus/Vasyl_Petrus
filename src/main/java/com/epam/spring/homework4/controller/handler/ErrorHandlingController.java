@@ -1,4 +1,4 @@
-package com.epam.spring.homework4.controller;
+package com.epam.spring.homework4.controller.handler;
 
 import com.epam.spring.homework4.error.Error;
 import com.epam.spring.homework4.error.enums.ErrorCode;

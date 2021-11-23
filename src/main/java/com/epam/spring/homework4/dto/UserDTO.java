@@ -19,7 +19,7 @@ public class UserDTO {
     private long userInformationId;
 
     @Positive
-    private int roleId;
+    private Integer roleId;
 
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")
@@ -27,5 +27,5 @@ public class UserDTO {
 
     @NotEmpty(message = "Password should not be empty!")
     @Size(min = 8, max = 25)
-    private transient String password;
+    private String password;
 }

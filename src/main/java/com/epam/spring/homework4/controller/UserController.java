@@ -35,12 +35,6 @@ public class UserController {
         return userService.createUser(userDTO);
     }
 
-    @ResponseStatus(HttpStatus.OK)
-    @PutMapping(value = "/user/{email}")
-    public UserDTO updateUser(@PathVariable String email, @RequestBody @Valid UserDTO userDTO) {
-        return userService.updateUser(email, userDTO);
-    }
-
     @DeleteMapping(value = "/user/{email}")
     public ResponseEntity<Void> deleteUser(@PathVariable String email) {
         userService.deleteUser(email);

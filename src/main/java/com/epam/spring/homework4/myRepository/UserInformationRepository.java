@@ -1,18 +1,19 @@
 package com.epam.spring.homework4.myRepository;
 
 import com.epam.spring.homework4.entity.UserInformation;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface UserInformationRepository {
+@Repository
+public interface UserInformationRepository extends JpaRepository<UserInformation, Long> {
 
-    UserInformation getUserInformation(long id);
+    UserInformation findById(long id);
 
-    List<UserInformation> getAllUsersInformation();
+    List<UserInformation> findAll();
 
-    UserInformation createUserInformation(UserInformation userInformation);
+    UserInformation save(UserInformation userInformation);
 
-    UserInformation updateUserInformation(long id, UserInformation userInformation);
-
-    void deleteUserInformation(long id);
+    void deleteById(long id);
 }

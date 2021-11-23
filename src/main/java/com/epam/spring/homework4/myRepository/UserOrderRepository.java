@@ -1,18 +1,19 @@
 package com.epam.spring.homework4.myRepository;
 
 import com.epam.spring.homework4.entity.UserOrder;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface UserOrderRepository {
+@Repository
+public interface UserOrderRepository extends JpaRepository<UserOrder, Long> {
 
-    UserOrder getUserOrder(long id);
+    UserOrder findById(long id);
 
-    List<UserOrder> getAllUserOrders();
+    List<UserOrder> findAll();
 
-    UserOrder createUserOrder(UserOrder userOrder);
+    UserOrder save(UserOrder userOrder);
 
-    UserOrder updateUserOrder(long id, UserOrder userOrder);
-
-    void deleteUserOrder(long id);
+    void deleteById(long id);
 }

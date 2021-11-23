@@ -34,12 +34,6 @@ public class BankCardController {
         return bankCardService.createBankCard(bankCardDTO);
     }
 
-    @ResponseStatus(HttpStatus.OK)
-    @PutMapping(value = "/bankcard/{id}")
-    public BankCardDTO updateBankCard(@PathVariable long id, @RequestBody @Valid BankCardDTO bankCardDTO) {
-        return bankCardService.updateBankCard(id, bankCardDTO);
-    }
-
     @DeleteMapping(value = "/bankcard/{id}")
     public ResponseEntity<Void> deleteBankCard(@PathVariable long id) {
         bankCardService.deleteBankCard(id);

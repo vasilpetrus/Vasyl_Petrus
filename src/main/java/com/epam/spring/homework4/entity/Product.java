@@ -2,12 +2,18 @@ package com.epam.spring.homework4.entity;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
+@Entity
 @Data
-@Builder
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private long categoryId;
     private String name;
     private String description;

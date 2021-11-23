@@ -1,18 +1,19 @@
 package com.epam.spring.homework4.myRepository;
 
 import com.epam.spring.homework4.entity.BankCard;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface BankCardRepository {
+@Repository
+public interface BankCardRepository extends JpaRepository<BankCard, Long> {
 
-    BankCard getBankCard(long id);
+    BankCard findById(long id);
 
-    List<BankCard> getAllBankCards();
+    List<BankCard> findAll();
 
-    BankCard createBankCard(BankCard bankCard);
+    BankCard save(BankCard bankCard);
 
-    BankCard updateBankCard(long id, BankCard bankCard);
-
-    void deleteBankCard(long id);
+    void deleteById(long id);
 }

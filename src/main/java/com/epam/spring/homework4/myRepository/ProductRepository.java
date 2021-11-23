@@ -1,18 +1,19 @@
 package com.epam.spring.homework4.myRepository;
 
 import com.epam.spring.homework4.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface ProductRepository {
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    Product getProduct(long id);
+    Product findById(long id);
 
-    List<Product> getAllProducts();
+    List<Product> findAll();
 
-    Product createProduct(Product product);
+    Product save(Product product);
 
-    Product updateProduct(long id, Product product);
-
-    void deleteProduct(long id);
+    void deleteById(long id);
 }

@@ -15,7 +15,7 @@ public enum Role {
     }
 
     public static Role getRole(User user) {
-        int roleId = user.getRoleId();
+        int roleId = user.getRole();
         return Role.values()[roleId - 1];
     }
 

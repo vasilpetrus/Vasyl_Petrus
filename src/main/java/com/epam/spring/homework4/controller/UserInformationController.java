@@ -34,12 +34,6 @@ public class UserInformationController {
         return userInformationService.createUserInformation(userInformationDTO);
     }
 
-    @ResponseStatus(HttpStatus.OK)
-    @PutMapping(value = "/user-information/{id}")
-    public UserInformationDTO updateUserInformation(@PathVariable long id, @RequestBody @Valid UserInformationDTO userInformationDTO) {
-        return userInformationService.updateUserInformation(id, userInformationDTO);
-    }
-
     @DeleteMapping(value = "/user-information/{id}")
     public ResponseEntity<Void> deleteUserInformation(@PathVariable long id) {
         userInformationService.deleteUserInformation(id);

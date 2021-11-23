@@ -34,12 +34,6 @@ public class OrderController {
         return orderService.createOrder(orderDTO);
     }
 
-    @ResponseStatus(HttpStatus.OK)
-    @PutMapping(value = "/order/{id}")
-    public OrderDTO updateOrder(@PathVariable long id, @RequestBody @Valid OrderDTO orderDTO) {
-        return orderService.updateOrder(id, orderDTO);
-    }
-
     @DeleteMapping(value = "/order/{id}")
     public ResponseEntity<Void> deleteOrder(@PathVariable long id) {
         orderService.deleteOrder(id);

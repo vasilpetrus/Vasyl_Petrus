@@ -12,7 +12,5 @@ public interface UserOrderService {
 
     UserOrderDTO createUserOrder(UserOrderDTO userOrderDTO);
 
-    UserOrderDTO updateUserOrder(long id, UserOrderDTO userOrderDTO);
-
     void deleteUserOrder(long id);
 }

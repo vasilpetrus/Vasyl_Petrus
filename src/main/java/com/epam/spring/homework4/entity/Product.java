@@ -1,8 +1,6 @@
 package com.epam.spring.homework4.entity;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 

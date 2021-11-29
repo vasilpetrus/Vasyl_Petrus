@@ -23,4 +23,6 @@ public class UserInformationDTO {
     private String lastName;
 
     private String telephone;
+
+    private BankCardDTO bankCard;
 }

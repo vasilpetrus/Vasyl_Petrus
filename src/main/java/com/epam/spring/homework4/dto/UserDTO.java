@@ -1,5 +1,6 @@
 package com.epam.spring.homework4.dto;
 
+import com.epam.spring.homework4.entity.UserInformation;
 import lombok.Builder;
 import lombok.Data;
 
@@ -15,11 +16,9 @@ public class UserDTO {
     @Positive
     private long id;
 
-    @Positive
-    private long userInformationId;
+    private UserInformationDTO userInformation;
 
-    @Positive
-    private Integer roleId;
+    private Role role;
 
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")

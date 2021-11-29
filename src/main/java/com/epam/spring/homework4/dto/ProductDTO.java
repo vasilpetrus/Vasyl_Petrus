@@ -13,8 +13,7 @@ public class ProductDTO {
     @Positive
     private long id;
 
-    @Positive
-    private long categoryId;
+    private CategoryDTO category;
 
     @NotEmpty(message = "Product name should not be empty!")
     private String name;

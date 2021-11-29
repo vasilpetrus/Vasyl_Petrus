@@ -13,9 +13,6 @@ public class BankCardDTO {
     @Positive
     private long id;
 
-    @Positive
-    private long userInformationId;
-
     @NotEmpty(message = "Password should not be empty!")
     private String cardNumber;
 

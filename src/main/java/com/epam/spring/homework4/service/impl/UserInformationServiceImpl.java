@@ -34,7 +34,7 @@ public class UserInformationServiceImpl implements UserInformationService {
 
     @Override
     public UserInformationDTO createUserInformation(UserInformationDTO userInformationDTO) {
-        log.info("create user information with id {}", userInformationDTO.getId());
+        log.info("create user information");
         UserInformation userInformation = UserInformationMapper.INSTANCE.mapUserInformation(userInformationDTO);
         userInformation = userInformationRepository.save(userInformation);
         return UserInformationMapper.INSTANCE.mapUserInformationDTO(userInformation);

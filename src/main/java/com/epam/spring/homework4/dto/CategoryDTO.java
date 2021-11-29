@@ -1,10 +1,12 @@
 package com.epam.spring.homework4.dto;
 
+import com.epam.spring.homework4.entity.Product;
 import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Positive;
+import java.util.List;
 
 @Data
 @Builder

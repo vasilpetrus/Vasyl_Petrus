@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -35,9 +36,10 @@ public class UserController {
         return userService.createUser(userDTO);
     }
 
+    @Transactional
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping(value = "/user/{email}")
-    public ResponseEntity<Void> deleteUser(@PathVariable String email) {
+    public void deleteUser(@PathVariable String email) {
         userService.deleteUser(email);
-        return ResponseEntity.noContent().build();
     }
 }
